@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{0bd572f7-afa0-4071-9a83-1c2f9c0872f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{f6cde158-75a1-4dd9-9b78-17304df6cb9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cuda_src">
+      <UniqueIdentifier>{5a39f6b0-5901-4cbf-adc1-d5625d7f19f6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Akari.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Akari.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="kernel.cuh">
+      <Filter>cuda_src</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="kernel.cu">
+      <Filter>cuda_src</Filter>
+    </CudaCompile>
+  </ItemGroup>
+</Project>

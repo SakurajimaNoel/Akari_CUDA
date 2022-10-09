@@ -81,11 +81,16 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Akari.cpp" />
+    <ClCompile Include="Ray.cpp" />
+    <ClCompile Include="Vec3.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Akari.h" />
+    <ClInclude Include="Color.h" />
     <ClInclude Include="kernel.cuh" />
+    <ClInclude Include="Ray.h" />
     <ClInclude Include="stb_image_write.h" />
+    <ClInclude Include="Vec3.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

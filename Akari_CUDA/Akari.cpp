@@ -4,8 +4,12 @@ constexpr char CHANNEL_NUM = 3;
 int main()
 {
 	const auto aspect_ratio = 16.0 / 9.0;
-	const int image_width = 400;
+	const int image_width = 1920;
 	const int image_height = static_cast<int>(image_width / aspect_ratio);
+
+	hittableList world;
+	world.add(std::make_shared<sphere>(point3(0, 0, -1), 0.5));
+	world.add(std::make_shared<sphere>(point3(0, -100.5, -1), 100));
 
 
 	auto viewport_height = 2.0;
@@ -33,7 +37,7 @@ int main()
 			auto u = double(i) / (image_width - 1);
 			auto v = double(j) / (image_height - 1);
 			ray r(origin, btm_lft_crnr +  horizontal * u +  vertical * v - origin);
-			color pixel_color = ray_color(r);
+			color pixel_color = ray_color(r,world);
 			//color pixel_color(double(i) / (image_width - 1), double(j) / (image_height - 1), 0.25);
 			
 			image_data[index++] = color_value(pixel_color.x);

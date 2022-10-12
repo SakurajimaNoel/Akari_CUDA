@@ -21,6 +21,12 @@
     <ClCompile Include="Ray.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="Sphere.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="HittalbeList.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Akari.h">
@@ -39,6 +45,15 @@
       <Filter>include</Filter>
     </ClInclude>
     <ClInclude Include="Ray.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Hittable.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Sphere.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="HittalbeList.h">
       <Filter>include</Filter>
     </ClInclude>
   </ItemGroup>

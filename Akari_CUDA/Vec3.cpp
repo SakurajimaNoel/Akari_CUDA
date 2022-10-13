@@ -4,7 +4,11 @@ vec3 vec3::operator+(const vec3& u) const
 {
 	return vec3(x + u.x, y + u.y, z + u.z);
 }
-
+vec3& vec3::operator+=(const vec3& u)
+{
+	x += u.x;	y += u.y;	z += u.z;
+	return *this;
+}
 vec3 vec3::operator-(const vec3& u) const
 {
 	return vec3(x - u.x, y - u.y, z - u.z);

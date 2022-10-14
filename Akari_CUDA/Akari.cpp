@@ -4,9 +4,10 @@ constexpr char CHANNEL_NUM = 3;
 int main()
 {
 	const auto aspect_ratio = 16.0 / 9.0;
-	const int image_width = 1920;
+	const int image_width = 1920 ;
 	const int image_height = static_cast<int>(image_width / aspect_ratio);
 	const int sample_size = 100;
+	const uint16_t depth = 50;
 
 	hittableList world;
 	world.add(std::make_shared<sphere>(point3(0, 0, -1), 0.5));
@@ -18,7 +19,6 @@ int main()
 
 	auto image_data = std::make_unique<uint8_t[]>(image_width * image_height * CHANNEL_NUM);
 
-	uint64_t index = 0;
 
 
 
@@ -36,7 +36,7 @@ int main()
 						auto u = (i + random_double()) / (image_width - 1);
 						auto v = (j + random_double()) / (image_height - 1);
 						ray r = cam.get_ray(u, v);
-						pixel_color = pixel_color + ray_color(r, world);
+						pixel_color = pixel_color + ray_color(r, world, depth);
 
 
 					}
@@ -51,6 +51,7 @@ int main()
 
 
 	};
+
 	stbi_write_png("image.png", image_width, image_height, CHANNEL_NUM, image_data.get(), image_width * CHANNEL_NUM);
 	image_data.reset();
 	return 0;

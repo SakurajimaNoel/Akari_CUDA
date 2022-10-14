@@ -2,7 +2,7 @@
 
 #include <cmath>
 #include <iostream>
-
+#include "Util.h"
 class vec3
 {
 public:
@@ -33,6 +33,11 @@ public:
 	double length_square() const;
 
 	void normalize();
+
+	static vec3 random();
+	static vec3 random(double min, double max);
+
+	
 	
 };
 
@@ -42,3 +47,4 @@ using color = vec3;
 double dot(const vec3& u, const vec3& v) ;
 vec3 cross(const vec3& u, const vec3& v) ;
 vec3 get_unitVector(const vec3& u);
+vec3 random_in_unit_sphere();

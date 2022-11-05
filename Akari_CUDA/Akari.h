@@ -9,7 +9,7 @@
 #include "HittalbeList.h"
 #include "Sphere.h"
 #include "Camera.h"
-
+#include "Material.h"
 #include<ppl.h>
 
 

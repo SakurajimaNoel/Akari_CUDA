@@ -83,6 +83,7 @@
     <ClCompile Include="Akari.cpp" />
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="HittalbeList.cpp" />
+    <ClCompile Include="Material.cpp" />
     <ClCompile Include="Ray.cpp" />
     <ClCompile Include="Sphere.cpp" />
     <ClCompile Include="Vec3.cpp" />
@@ -94,6 +95,7 @@
     <ClInclude Include="Hittable.h" />
     <ClInclude Include="HittalbeList.h" />
     <ClInclude Include="kernel.cuh" />
+    <ClInclude Include="Material.h" />
     <ClInclude Include="Ray.h" />
     <ClInclude Include="Sphere.h" />
     <ClInclude Include="stb_image_write.h" />

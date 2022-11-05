@@ -4,14 +4,17 @@ constexpr char CHANNEL_NUM = 3;
 int main()
 {
 	const auto aspect_ratio = 16.0 / 9.0;
-	const int image_width = 1920 ;
+	const int image_width = 600 ;
 	const int image_height = static_cast<int>(image_width / aspect_ratio);
 	const int sample_size = 100;
 	const uint16_t depth = 50;
 
+	auto material_ground = std::make_shared<lambertian>(color(0.8, 0.8, 0.0));
+	auto material_diffuse_sphere = std::make_shared<lambertian>(color(0.7, 0.3, 0.3));
+	auto material_metal = std::make_shared<metal>(color(0.8, 0.6, 0.2), 0.3);
 	hittableList world;
-	world.add(std::make_shared<sphere>(point3(0, 0, -1), 0.5));
-	world.add(std::make_shared<sphere>(point3(0, -100.5, -1), 100));
+	world.add(std::make_shared<sphere>(point3(0, 0, -1), 0.5, material_metal));
+	world.add(std::make_shared<sphere>(point3(0, -100.5, -1), 100, material_ground));
 
 
 	camera cam;

@@ -81,3 +81,14 @@ vec3 random_in_unit_sphere()
 	}
 }
 
+vec3 reflect(const vec3& v, const vec3& n)
+{
+	return v - n * dot(v, n) * 2 ;
+}
+
+
+const bool vec3::near_zero() 
+{
+	const auto s = 1e-8;
+	return(fabs(x < s) && fabs(y < s) && fabs(z < s));
+}

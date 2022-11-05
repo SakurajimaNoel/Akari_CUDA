@@ -37,7 +37,7 @@ public:
 	static vec3 random();
 	static vec3 random(double min, double max);
 
-	
+	const bool near_zero();
 	
 };
 
@@ -48,3 +48,4 @@ double dot(const vec3& u, const vec3& v) ;
 vec3 cross(const vec3& u, const vec3& v) ;
 vec3 get_unitVector(const vec3& u);
 vec3 random_in_unit_sphere();
+vec3 reflect(const vec3& v, const vec3& n);

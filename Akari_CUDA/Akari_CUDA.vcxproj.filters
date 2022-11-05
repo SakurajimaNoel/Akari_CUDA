@@ -28,6 +28,9 @@
       <Filter>src</Filter>
     </ClCompile>
     <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="Material.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Akari.h">
@@ -61,6 +64,9 @@
       <Filter>include</Filter>
     </ClInclude>
     <ClInclude Include="Camera.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="Material.h">
       <Filter>include</Filter>
     </ClInclude>
   </ItemGroup>

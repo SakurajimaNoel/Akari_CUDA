@@ -12,8 +12,9 @@ int main()
 	auto material_ground = std::make_shared<lambertian>(color(0.8, 0.8, 0.0));
 	auto material_diffuse_sphere = std::make_shared<lambertian>(color(0.7, 0.3, 0.3));
 	auto material_metal = std::make_shared<metal>(color(0.8, 0.6, 0.2), 0.3);
+	auto material_glass = std::make_shared<dielectric>(1.5);
 	hittableList world;
-	world.add(std::make_shared<sphere>(point3(0, 0, -1), 0.5, material_metal));
+	world.add(std::make_shared<sphere>(point3(0, 0, -1), -0.4, material_glass));
 	world.add(std::make_shared<sphere>(point3(0, -100.5, -1), 100, material_ground));
 
 

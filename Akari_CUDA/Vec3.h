@@ -49,3 +49,4 @@ vec3 cross(const vec3& u, const vec3& v) ;
 vec3 get_unitVector(const vec3& u);
 vec3 random_in_unit_sphere();
 vec3 reflect(const vec3& v, const vec3& n);
+vec3 refract(const vec3& v, const vec3& n, double eta);

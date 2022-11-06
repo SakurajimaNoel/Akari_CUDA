@@ -86,6 +86,13 @@ vec3 reflect(const vec3& v, const vec3& n)
 	return v - n * dot(v, n) * 2 ;
 }
 
+vec3 refract(const vec3& v, const vec3& n, double eta)
+{
+	auto cos_theta = fmin(dot(-v, n), 1.0);
+	vec3 r_perp = (v + n * cos_theta) * eta;
+	vec3 r_parallel = n * -sqrt(fabs(1.0 - r_perp.length_square()));
+	return r_perp + r_parallel;
+}
 
 const bool vec3::near_zero() 
 {
